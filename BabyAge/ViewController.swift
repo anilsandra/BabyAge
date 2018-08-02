@@ -9,15 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+@IBOutlet weak var ageBox: UITextField!
+     @IBOutlet weak var ageDisp: UILabel!
     @IBAction func submitBtn(_ sender: Any) {
         
-        let age:Int? = Int(ageBox.text!)!
-        let calAge = age!*7
+        let ageText = ageBox.text
+            
+        let Intage = Int(ageText!)
+            
+            if let age = Intage{
+            let calAge = age*7
         ageDisp.text = String(calAge)
+        }else{
+            ageDisp.text = "Please enter an Integer"
+        }
     }
-    @IBOutlet weak var ageDisp: UILabel!
-    @IBOutlet weak var ageBox: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
