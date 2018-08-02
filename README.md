@@ -1,5 +1,7 @@
-# Project Title
- BabyAge
+#  BabyAge
+
+#Project Title
+BabyAge
 
 This is a simple application for fun for calculating baby age.
 
